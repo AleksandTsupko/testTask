@@ -1,0 +1,7 @@
+export const testTypes = {
+    GET_USERS: "GET_USERS",
+    DELETE_USER: "DELETE_USER",
+    MODAL_EDIT_OPEN: "MODAL_EDIT_OPEN",
+    EDIT_USER: "EDIT_USER",
+    PAGIN_SWITCH: "PAGIN_SWITCH"
+}

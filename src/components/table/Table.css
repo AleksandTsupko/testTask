@@ -1,0 +1,94 @@
+.table {
+  margin: 2em;
+  display: grid;
+  grid-auto-rows: 3em;
+  grid-template-columns: 1fr repeat(3, 3fr) 2fr 1fr;
+}
+
+.table * {
+  display: flex;
+  align-items: center;
+}
+
+.table .th {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  background-color: var(--clr-gray3);
+  cursor: default;
+}
+
+.table .th [data-sort] {
+  display: inline-flex;
+  vertical-align: top;
+  margin-left: 1ch;
+  flex-direction: column;
+  gap: 0.2em;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.table .th [data-sort] span {
+  display: block;
+  border: 0.3em solid transparent;
+  opacity: 0.3;
+}
+
+.table .th [data-sort] span:first-child {
+  border-top-width: 0;
+  border-bottom-width: 0.5em;
+  border-bottom-color: white;
+}
+
+.table .th [data-sort] span:last-child {
+  border-bottom-width: 0;
+  border-top-width: 0.5em;
+  border-top-color: white;
+}
+
+.table [data-dir='+'] span:last-child {
+  opacity: 1;
+}
+
+.table [data-dir='-'] span:first-child {
+  opacity: 1;
+}
+
+.edit {
+  width: 1em;
+  height: 1em;
+  background-image: url("../../../public/edit.svg");
+  cursor: pointer;
+}
+
+.delete {
+  width: 1em;
+  height: 1em;
+  background-image: url("../../../public/delete.svg");
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pagination * {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  margin: 0.3em;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.pagination .active {
+  background-color: darkcyan;
+}
